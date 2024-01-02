@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+
+  database:
+    container_name: postgres
+    image: postgres:13-alpine
+    env_file:
+      - .env-files/postgres
+    ports:
+      - "5432:5432"
+
+  app:
+    container_name: rindustest
+    platform: "linux/amd64"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env-files/production
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
+    entrypoint: ["/app/start.sh"]

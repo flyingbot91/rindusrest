@@ -1,0 +1,3 @@
+POSTGRES_DB=rindusdb
+POSTGRES_USER=rindus
+POSTGRES_PASSWORD=rindus

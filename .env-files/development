@@ -1,0 +1,11 @@
+DEBUG=True
+ALLOWED_HOSTS=[]
+
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=rindusdb
+DB_USER=rindus
+DB_PASSWORD=rindus
+DB_HOST=localhost
+DB_PORT=5432
+
+SECRET_KEY = 'django-insecure-$m9@*el28^ejqq*ocr03mz-w_89jqnfp#3jxj$8y+4ot6e4h68'
